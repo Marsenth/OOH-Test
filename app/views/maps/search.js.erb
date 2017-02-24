@@ -1,0 +1,16 @@
+<%if !@nears.empty? %>
+	$('#map').html('');
+	var lat = <%=@nears.first.latitude%>, lng = <%=@nears.first.longitude%>;
+	initMap(lat, lng);
+
+	<% @nears.each do |n| %>
+		var myLatLng = {lat: <%=n.latitude%>, lng: <%=n.longitude%>};
+		var marker = new google.maps.Marker({
+		    position: myLatLng,
+		    map: map
+		});
+	<%end%>
+
+<%else%>
+	alert('No hay ninguna localidad cercana a la direccion indicada');
+<%end%>

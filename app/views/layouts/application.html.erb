@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>OHHTest</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  <meta name="viewport" content="initial-scale=1.0">
+  <meta charset="utf-8">
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCS3imCwOim8Xpg85rrE-6gan8CliQPyCA&callback=initMap"
+    async defer></script>
+</head>
+<body>
+
+<%= yield %>
+
+</body>
+</html>
